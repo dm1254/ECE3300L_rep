@@ -26,8 +26,8 @@ bcd_counter bcd_counter_inst(
     .clk_div(clk_div),
     .rst_n(BTN0),
     .dir_units(SW[7]),
-    .dir_tens(SW[8])
-    .bcd_units_output(bcd_units)
+    .dir_tens(SW[8]),
+    .bcd_units_output(bcd_units),
     .bcd_tens_output(bcd_tens)
 );
 
@@ -53,3 +53,4 @@ seg7_scan seg7_inst(
 
 );
 assign LED = ALU_result; 
+endmodule
