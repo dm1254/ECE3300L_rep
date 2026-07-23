@@ -4,7 +4,7 @@ module bcd_counter(
     input wire dir_units,
     input wire dir_tens,
     output [3:0] bcd_units_output,
-    ouput [3:0] bcd_tens_output
+    output [3:0] bcd_tens_output
 );
 
 wire CO;
