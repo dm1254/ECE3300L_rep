@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module bcd_counter(
     input wire clk_div,
     input wire rst_n,
@@ -24,7 +25,8 @@ BCD_single_digit BCD_tens(
     .rst_n(rst_n), 
     .dir(dir_tens),
     .enable(CO),
-    .Carry_Out();
+    .Carry_Out(),
     .bcd_output(bcd_tens_output)
 );
 
+endmodule
