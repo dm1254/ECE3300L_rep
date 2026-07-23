@@ -3,7 +3,7 @@ module clock_divider (
     input wire rst_n,
     input wire [4:0] sel_speed,
     output wire clk_divider,
-    output reg [31:0] counter_bus // Added so the top wrapper can access the scan clock
+    output wire [31:0] counter_bus // Added so the top wrapper can access the scan clock
 );
 
 
@@ -16,9 +16,9 @@ module clock_divider (
     );
 
     // 32-bit free running counter
-    free_run_counter_32bit counter_inst (
+    FreeRun_Counter_32bit counter_inst (
         .clk(clk), // Driven directly by the fast onboard 100MHz clock
         .rst_n(rst_n),
         .count(counter_bus)
     );
-
+endmodule
