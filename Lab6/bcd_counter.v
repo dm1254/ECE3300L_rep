@@ -19,7 +19,7 @@ BCD_single_digit BCD_units(
 );
 
 
-BCD_single_digit BCD_units(
+BCD_single_digit BCD_tens(
     .clk(clk_div),
     .rst_n(rst_n), 
     .dir(dir_tens),
