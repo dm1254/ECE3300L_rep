@@ -4,6 +4,6 @@ module control_decoder(
 );
 
 always @(*) begin
-    ctrl_nibble = 4bit_nibble;
+    ctrl_nibble = nibble_in;
 end 
 endmodule
